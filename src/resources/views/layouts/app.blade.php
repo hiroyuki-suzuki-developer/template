@@ -48,7 +48,7 @@
                             機能
                             </a>
                             <ul class="dropdown-menu border-0" aria-labelledby="navbarDropdown">
-                                <li class="nav-item"><a class="dropdown-item" href="#">機能</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="{{ route('function-chats') }}">チャット</a></li>
                             </ul>
                         </li>
                     </ul>
