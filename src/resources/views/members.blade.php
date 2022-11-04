@@ -3,27 +3,8 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-2">
-            <div class="sidebar content-box" style="display: block;">
-                <ul class="list-group mb-3">
-                    <a href="{{ route('notices') }}">
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">お知らせ</h6>
-                        </div>
-                        </li>
-                    </a>
-                    <a href="{{ route('members') }}">
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">会員一覧</h6>
-                        </div>
-                        </li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-8">
+        @include('commom.side-menu')
+        <div class="col-md-9">
             <div class="my-3 p-3 bg-body rounded shadow-sm">
                 <form>
                     <div class="mb-3">

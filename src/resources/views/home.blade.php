@@ -20,5 +20,4 @@
         </div>
     </div>
 </div>
-@include('commom.footer1')
 @endsection

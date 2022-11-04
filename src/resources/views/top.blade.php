@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row justify-content-center">
             @include('commom.side-menu')
-            <div class="col-md-8">
+            <div class="col-md-9">
                 {{-- バナー --}}
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">

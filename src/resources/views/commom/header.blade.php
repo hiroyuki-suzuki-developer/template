@@ -30,6 +30,7 @@
                     <ul class="dropdown-menu border-0" aria-labelledby="navbarDropdown">
                         <li class="nav-item"><a class="dropdown-item" href="{{ route('chats') }}">チャット</a></li>
                         <li class="nav-item"><a class="dropdown-item" href="{{ route('form') }}">フォーム</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="{{ route('carender') }}">カレンダー</a></li>
                     </ul>
                 </li>
             </ul>
@@ -38,13 +39,13 @@
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">ログイン</a>
                         </li>
                     @endif
 
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">登録</a>
                         </li>
                     @endif
                 @else
@@ -57,7 +58,7 @@
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                ログアウト
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

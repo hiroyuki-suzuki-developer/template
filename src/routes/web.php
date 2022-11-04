@@ -28,6 +28,7 @@ Route::get('/members', function () {return view('members');})->name('members');
 Route::get('/member', function () {return view('member');})->name('member');
 Route::get('/staff', function () {return view('staff');})->name('staff');
 Route::get('/form', function () {return view('form');})->name('form');
+Route::get('/carender', function () {return view('carender');})->name('carender');
 
 Route::get('/chats', function () {return view('chats');})->name('chats');
 Route::get('/chat', function () {return view('chat');})->name('chat');

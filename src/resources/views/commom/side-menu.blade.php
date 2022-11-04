@@ -1,4 +1,4 @@
-<div class="col-md-2">
+<div class="col-md-3">
     <div class="sidebar content-box" style="display: block;">
         <ul class="list-group mb-3 rounded">
             <li class="list-group-item d-flex justify-content-between lh-sm">

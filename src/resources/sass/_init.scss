@@ -377,3 +377,8 @@ template {
 [hidden] {
     display: none;
 }
+
+.table th,
+.table td {
+    border: none;
+}
