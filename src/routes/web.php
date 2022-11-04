@@ -14,13 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('top');
+})->name('top');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/design1', function () {return view('design1');})->name('design1');
 Route::get('/function1', function () {return view('function1');})->name('function1');
-Route::get('/function-chats', function () {return view('function-chats');})->name('function-chats');
-Route::get('/function-chat', function () {return view('function-chat');})->name('function-chat');
+Route::get('/notices', function () {return view('notices');})->name('notices');
+Route::get('/notice', function () {return view('notice');})->name('notice');
+Route::get('/members', function () {return view('members');})->name('members');
+Route::get('/member', function () {return view('member');})->name('member');
+Route::get('/staff', function () {return view('staff');})->name('staff');
+Route::get('/form', function () {return view('form');})->name('form');
+
+Route::get('/chats', function () {return view('chats');})->name('chats');
+Route::get('/chat', function () {return view('chat');})->name('chat');
