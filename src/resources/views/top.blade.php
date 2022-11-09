@@ -152,6 +152,48 @@
                         <a href="#" class="text-reset">もっとみる</a>
                     </small>
                 </div>
+
+
+
+                <div class="my-3 p-3 bg-body rounded shadow-sm">
+                    <h6 class="border-bottom pb-2 mb-0">商品一覧</h6>
+                    <div class="d-flex text-muted pt-3 pb-2 border-bottom">
+                        <div class="text-center me-2">
+                            <svg class="bd-placeholder-img rounded-circle" width="50" height="50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+                        </div>
+                    
+                        <div class="pb-3 mb-0 small lh-sm w-100">
+                            <div class="d-flex justify-content-between">
+                                <strong class="text-gray-dark">商品</strong>
+                                <a href="{{ route('product') }}">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex text-muted pt-3 pb-2 border-bottom">
+                        <div class="text-center me-2">
+                            <svg class="bd-placeholder-img rounded-circle" width="50" height="50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+                        </div>
+                    
+                        <div class="pb-3 mb-0 small lh-sm w-100">
+                            <div class="d-flex justify-content-between">
+                                <strong class="text-gray-dark">商品</strong>
+                                <a href="{{ route('product') }}">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex text-muted pt-3 pb-2 border-bottom">
+                        <div class="text-center me-2">
+                            <svg class="bd-placeholder-img rounded-circle" width="50" height="50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+                        </div>
+                    
+                        <div class="pb-3 mb-0 small lh-sm w-100">
+                            <div class="d-flex justify-content-between">
+                                <strong class="text-gray-dark">商品</strong>
+                                <a href="{{ route('product') }}">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
