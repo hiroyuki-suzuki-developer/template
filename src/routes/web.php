@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,8 +33,12 @@ Route::get('/form', function () {return view('form');})->name('form');
 Route::post('/form', [App\Http\Controllers\FormController::class, 'form'])->name('post-form');
 Route::get('/carender', function () {return view('carender');})->name('carender');
 
-Route::get('/product', function () {return view('product');})->name('product');
-Route::post('/purchase', [App\Http\Controllers\PurchaseController::class, 'purchase'])->name('purchase');
+Route::group(['middleware'=> 'auth'], function () {
+    Route::get('/purchase', function () {return view('purchase');})->name('purchase');
+    Route::post('/purchase', [App\Http\Controllers\StripeController::class, 'purchase'])->name('purchase.post');
+    Route::get('/subscription', [App\Http\Controllers\StripeController::class, 'showSubscription'])->name('subscription');
+    Route::post('/subscribe', [App\Http\Controllers\StripeController::class, 'subscription'])->name('subscribe.post');
+});
 
 Route::get('/chats', function () {return view('chats');})->name('chats');
 Route::get('/chat', function () {return view('chat');})->name('chat');
