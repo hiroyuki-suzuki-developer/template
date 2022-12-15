@@ -45,6 +45,21 @@ services:
         source: ./src
         target: /workspace
 
+  node:
+    build:
+      context: .
+      dockerfile: ./infra/docker/node/Dockerfile
+    ports:
+      - target: 8080
+        published: ${DB_PUBLISHED_PORT:-8080}
+        protocol: tcp
+        mode: host
+    tty: true
+    volumes:
+      - type: bind
+        source: ./src
+        target: /workspace
+
   db:
     build:
       context: .
