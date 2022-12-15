@@ -18,8 +18,8 @@
                     デザイン
                     </a>
                     <ul class="dropdown-menu border-0" aria-labelledby="navbarDropdown">
-                        <li class="nav-item"><a class="dropdown-item" href="#">デザイン1</a></li>
-                        <li class="nav-item"><a class="dropdown-item" href="#">デザイン2</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="{{route('top')}}">フロント</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="{{route('admin.top')}}">管理</a></li>
                         <li class="nav-item"><a class="dropdown-item" href="#">デザイン3</a></li>
                     </ul>
                 </li>

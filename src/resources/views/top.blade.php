@@ -165,7 +165,7 @@
                         <div class="pb-3 mb-0 small lh-sm w-100">
                             <div class="d-flex justify-content-between">
                                 <strong class="text-gray-dark">商品</strong>
-                                <a href="{{ route('product') }}">詳細</a>
+                                <a href="{{ route('purchase') }}">詳細</a>
                             </div>
                         </div>
                     </div>
@@ -177,7 +177,7 @@
                         <div class="pb-3 mb-0 small lh-sm w-100">
                             <div class="d-flex justify-content-between">
                                 <strong class="text-gray-dark">商品</strong>
-                                <a href="{{ route('product') }}">詳細</a>
+                                <a href="{{ route('purchase') }}">詳細</a>
                             </div>
                         </div>
                     </div>
@@ -189,7 +189,7 @@
                         <div class="pb-3 mb-0 small lh-sm w-100">
                             <div class="d-flex justify-content-between">
                                 <strong class="text-gray-dark">商品</strong>
-                                <a href="{{ route('product') }}">詳細</a>
+                                <a href="{{ route('purchase') }}">詳細</a>
                             </div>
                         </div>
                     </div>

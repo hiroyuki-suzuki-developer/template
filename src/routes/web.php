@@ -21,7 +21,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/design1', function () {return view('design1');})->name('design1');
 Route::get('/function1', function () {return view('function1');})->name('function1');
 Route::get('/notices', function () {return view('notices');})->name('notices');
 Route::get('/notice', function () {return view('notice');})->name('notice');
@@ -42,3 +41,15 @@ Route::group(['middleware'=> 'auth'], function () {
 
 Route::get('/chats', function () {return view('chats');})->name('chats');
 Route::get('/chat', function () {return view('chat');})->name('chat');
+
+Route::get('/admin', function () {return view('admin.top');})->name('admin.top');
+Route::get('/admin/tables', function () {return view('admin.tables');})->name('admin.tables');
+Route::get('/admin/register', function () {return view('admin.register');})->name('admin.register');
+Route::get('/admin/password', function () {return view('admin.password');})->name('admin.password');
+Route::get('/admin/login', function () {return view('admin.login');})->name('admin.login');
+Route::get('/admin/charts', function () {return view('admin.charts');})->name('admin.charts');
+Route::get('/admin/401', function () {return view('admin.401');})->name('admin.401');
+Route::get('/admin/404', function () {return view('admin.404');})->name('admin.404');
+Route::get('/admin/500', function () {return view('admin.500');})->name('admin.500');
+Route::get('/admin/layout-static', function () {return view('admin.layout-static');})->name('admin.layout-static');
+Route::get('/admin/layout-sidenav-light', function () {return view('admin.layout-sidenav-light');})->name('admin.layout-sidenav-light');
