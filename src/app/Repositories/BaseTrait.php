@@ -27,7 +27,11 @@ trait BaseTrait
     {
         $model = $this->model;
         foreach ($params as $key => $value) {
-            $model = $model->where($key, $value);
+            if (gettype($value) === 'array') {
+                $model = $model->whereIn($key, $value);
+            } else {
+                $model = $model->where($key, $value);
+            }
         }
         return $model->first();
     }
@@ -39,7 +43,11 @@ trait BaseTrait
     {
         $model = $this->model;
         foreach ($params as $key => $value) {
-            $model = $model->where($key, $value);
+            if (gettype($value) === 'array') {
+                $model = $model->whereIn($key, $value);
+            } else {
+                $model = $model->where($key, $value);
+            }
         }
         return $model->firstOrFail();
     }
@@ -51,7 +59,27 @@ trait BaseTrait
     {
         $model = $this->model;
         foreach ($params as $key => $value) {
-            $model = $model->where($key, $value);
+            if (gettype($value) === 'array') {
+                $model = $model->whereIn($key, $value);
+            } else {
+                $model = $model->where($key, $value);
+            }
+        }
+        return $model->get();
+    }
+
+    /**
+     * 検索用の関数
+     */
+    public function searchLike(array $params = [])
+    {
+        $model = $this->model;
+        foreach ($params as $key => $value) {
+            if (gettype($value) === 'array') {
+                $model = $model->whereIn($key, $value);
+            } else {
+                $model = $model->where($key, 'LIKE', "%{$value}%");
+            }
         }
         return $model->get();
     }
@@ -77,16 +105,24 @@ trait BaseTrait
     /**
      * 削除の関数
      */
-    public function delete(int $id)
+    public function delete(array $params)
     {
-        return $this->model->delete($id);
+        $model = $this->model;
+        foreach ($params as $key => $value) {
+            if (gettype($value) === 'array') {
+                $model = $model->whereIn($key, $value);
+            } else {
+                $model = $model->where($key, 'LIKE', "%{$value}%");
+            }
+        }
+        return $model->delete();
     }
 
     /**
      * 複数削除の関数
      */
-    public function destory(array $ids)
+    public function destory(int $id)
     {
-        return $this->model->destory($ids);
+        return $this->model->destory($id);
     }
 }
