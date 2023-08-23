@@ -10,24 +10,23 @@
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">Dashboard</h1>
+                <h1 class="mt-4">記事</h1>
                 <ol class="breadcrumb mb-4">
-                    <li class="breadcrumb-item active">Dashboard</li>
+                    <li class="breadcrumb-item active">新規記事</li>
                 </ol>
                 <div>
                     <textarea id="editor" name="editor" style="width:100%;"></textarea>
                 </div>
+                <button class="btn btn-primary">保存</button>
             </div>
         </main>
         @include('commom.admin-footer')
     </div>
 </div>
-<!-- Import prismjs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
-<!-- Import prismjs line highlight plugin -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/line-highlight/prism-line-highlight.min.js"></script>
 <script src="/trumbowyg/dist/trumbowyg.min.js"></script>
-<script src="/trumbowyg/dist/trumbowyg.min.js"></script>
+<script src="/trumbowyg/dist/plugins/highlight/trumbowyg.highlight.min.js"></script>
 <script>
 $(function(){
 $('#editor').trumbowyg({
