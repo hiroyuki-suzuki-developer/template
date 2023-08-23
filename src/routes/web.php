@@ -53,3 +53,4 @@ Route::get('/admin/404', function () {return view('admin.404');})->name('admin.4
 Route::get('/admin/500', function () {return view('admin.500');})->name('admin.500');
 Route::get('/admin/layout-static', function () {return view('admin.layout-static');})->name('admin.layout-static');
 Route::get('/admin/layout-sidenav-light', function () {return view('admin.layout-sidenav-light');})->name('admin.layout-sidenav-light');
+Route::get('/admin/article', function () {return view('admin.article');})->name('admin.article');
