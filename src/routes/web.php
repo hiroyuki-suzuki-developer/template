@@ -54,3 +54,35 @@ Route::get('/admin/500', function () {return view('admin.500');})->name('admin.5
 Route::get('/admin/layout-static', function () {return view('admin.layout-static');})->name('admin.layout-static');
 Route::get('/admin/layout-sidenav-light', function () {return view('admin.layout-sidenav-light');})->name('admin.layout-sidenav-light');
 Route::get('/admin/article', function () {return view('admin.article');})->name('admin.article');
+
+Route::group(['prefix' => 'admin-9285', 'as' => 'admin.'], function() {
+    Route::group(['middleware'=> 'guest'], function () {
+        Route::get('login', [App\Http\Controllers\Admin\LoginController::class, 'showLoginForm'])->name('login');
+        Route::post('login', [App\Http\Controllers\Admin\LoginController::class, 'login']);
+        Route::get('password', function () {return view('admin.password');})->name('password');
+    });
+
+    Route::group(['middleware'=> 'auth:staff'], function () {
+        // コンテンツ
+        Route::get('', [App\Http\Controllers\Admin\TopController::class, 'index'])->name('top');
+        Route::group(['prefix' => 'users', 'as' => 'user.'], function() {
+            Route::get('', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('index');
+            Route::get('{user_id}', [App\Http\Controllers\Admin\UserController::class, 'show'])->where('user_id', '[0-9]+')->name('show');
+            Route::patch('{user_id}', [App\Http\Controllers\Admin\UserController::class, 'update'])->where('user_id', '[0-9]+')->name('update');
+        });
+        Route::group(['prefix' => 'staffs', 'as' => 'staff.'], function() {
+            Route::get('', [App\Http\Controllers\Admin\StaffController::class, 'index'])->name('index');
+            Route::get('create', [App\Http\Controllers\Admin\StaffController::class, 'create'])->name('create');
+            Route::post('', [App\Http\Controllers\Admin\StaffController::class, 'store'])->name('store');
+            Route::get('{staff_id}', [App\Http\Controllers\Admin\StaffController::class, 'show'])->where('staff_id', '[0-9]+')->name('show');
+            Route::patch('{staff_id}', [App\Http\Controllers\Admin\StaffController::class, 'update'])->where('staff_id', '[0-9]+')->name('update');
+        });
+        Route::group(['prefix' => 'notifications', 'as' => 'notifications.'], function() {
+            Route::get('', [App\Http\Controllers\Admin\NotificationController::class, 'index'])->name('index');
+            Route::get('create', [App\Http\Controllers\Admin\NotificationController::class, 'create'])->name('create');
+            Route::post('', [App\Http\Controllers\Admin\NotificationController::class, 'store'])->name('store');
+            Route::get('{notification_id}', [App\Http\Controllers\Admin\NotificationController::class, 'show'])->where('notification_id', '[0-9]+')->name('show');
+            Route::patch('{notification_id}', [App\Http\Controllers\Admin\NotificationController::class, 'update'])->where('notification_id', '[0-9]+')->name('update');
+        });
+    });
+});

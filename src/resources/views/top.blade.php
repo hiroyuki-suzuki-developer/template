@@ -46,7 +46,7 @@
                     </button>
                 </div>
 
-                <div class="my-3 p-3 bg-body rounded shadow-sm">
+                <div class="my-3 p-3 bg-white rounded shadow-sm">
                     <h6 class="border-bottom pb-2 mb-0">お知らせ</h6>
                     <div class="d-flex text-muted pt-3">
                         <span class="me-2">2022-01-01</span>
@@ -73,7 +73,7 @@
                     </small>
                 </div>
 
-                <div class="my-3 p-3 bg-body rounded shadow-sm">
+                <div class="my-3 p-3 bg-white rounded shadow-sm">
                     <h6 class="border-bottom pb-2 mb-0">会員一覧</h6>
                     <div class="d-flex text-muted pt-3 pb-2 border-bottom">
                         <div class="text-center me-2">
@@ -120,7 +120,7 @@
                 </div>
 
 
-                <div class="my-3 p-3 bg-body rounded shadow-sm">
+                <div class="my-3 p-3 bg-white rounded shadow-sm">
                     <h6 class="border-bottom pb-2 mb-0">新規スタッフ</h6>
                     <div class="row">
                         <div class="col-lg-4 p-3">
@@ -155,7 +155,7 @@
 
 
 
-                <div class="my-3 p-3 bg-body rounded shadow-sm">
+                <div class="my-3 p-3 bg-white rounded shadow-sm">
                     <h6 class="border-bottom pb-2 mb-0">商品一覧</h6>
                     <div class="d-flex text-muted pt-3 pb-2 border-bottom">
                         <div class="text-center me-2">

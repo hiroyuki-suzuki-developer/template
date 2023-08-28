@@ -13,6 +13,18 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="{{ $headDescription??'' }}" />
+    <meta name="author" content="{{ $headAuthor??'' }}" />
+    <meta name="keywords" content="{{ $headKeywords??'' }}">
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:locale" content=""  />
+    <!-- <meta name="robots" content="noindex,nofollow"> -->
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
