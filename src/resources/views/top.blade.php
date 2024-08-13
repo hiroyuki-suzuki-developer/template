@@ -4,6 +4,7 @@
 <main>
     <div class="container">
         <div class="row justify-content-center">
+            @include('commom.breadcrumb',['breadcrumbs' => ['/' => 'TOP']])
             @include('commom.side-menu')
             <div class="col-md-9">
                 {{-- バナー --}}
