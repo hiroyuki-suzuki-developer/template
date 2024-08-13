@@ -7,8 +7,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends BaseAuthModel
+class Staff extends BaseAuthModel
 {
+    const AUTHORITY_NAME = [
+        0 => '一般',
+        1 => '管理者',
+    ];
+    protected $table = 'staffs';
     /**
      * The attributes that are mass assignable.
      *
@@ -18,6 +23,7 @@ class User extends BaseAuthModel
         'name',
         'email',
         'password',
+        'authority',
     ];
 
     /**
@@ -38,4 +44,14 @@ class User extends BaseAuthModel
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * 権限名
+     *
+     * @return string
+     */
+    public function getAuthorityNameAttribute()
+    {
+        return self::AUTHORITY_NAME[$this->authority];
+    }
 }
