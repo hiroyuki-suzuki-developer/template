@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class UsersTableSeeder extends Seeder
 {
@@ -23,6 +24,7 @@ class UsersTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
+                'uuid' => Str::uuid(),
                 'name' => 'hiroyuki',
                 'email' => 'hiroyuki.suzuki.0805@gmail.com',
                 'email_verified_at' => NULL,
@@ -34,10 +36,10 @@ class UsersTableSeeder extends Seeder
                 'update_user' => NULL,
                 'delete_datetime' => NULL,
                 'delete_user' => NULL,
-                'stripe_id' => NULL,
-                'pm_type' => NULL,
-                'pm_last_four' => NULL,
-                'trial_ends_at' => NULL,
+                // 'stripe_id' => NULL,
+                // 'pm_type' => NULL,
+                // 'pm_last_four' => NULL,
+                // 'trial_ends_at' => NULL,
             ),
         ));
         

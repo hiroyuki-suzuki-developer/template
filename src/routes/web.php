@@ -20,6 +20,34 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// お問い合わせ
+
+Route::group(['middleware'=> 'auth'], function () {
+    // マイページ
+    Route::get('mypage', [App\Http\Controllers\Front\CompanyController::class, 'index'])->name('index');
+    // プロフィール詳細
+    Route::get('profile', [App\Http\Controllers\Front\CompanyController::class, 'index'])->name('index');
+});
+
+Route::group(['prefix' => 'companies', 'as' => 'admin.'], function() {
+    // 企業一覧
+    Route::get('', [App\Http\Controllers\Front\CompanyController::class, 'index'])->name('index');
+    // 企業詳細
+    Route::get('{company_id}', [App\Http\Controllers\Front\CompanyController::class, 'show'])->name('show');
+    // 企業動画
+    Route::get('{company_id}/movies', [App\Http\Controllers\Front\CompanyController::class, 'movies'])->name('movies');
+});
+
+// 動画一覧
+Route::get('movies', [App\Http\Controllers\Front\MovieController::class, 'movies'])->name('movies.index');
+// 動画詳細
+Route::get('movies/{movie_id}', [App\Http\Controllers\Front\MovieController::class, 'movies'])->name('movies.show');
+// イベントカレンダー
+Route::get('events', [App\Http\Controllers\Front\EventController::class, 'index'])->name('movies.index');
+// イベント詳細
+Route::get('events/{event_id}', [App\Http\Controllers\Front\EventController::class, 'show'])->name('movies.show');
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/function1', function () {return view('function1');})->name('function1');
 Route::get('/notices', function () {return view('notices');})->name('notices');

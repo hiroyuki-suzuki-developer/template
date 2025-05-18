@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class StaffsTableSeeder extends Seeder
 {
@@ -23,6 +24,7 @@ class StaffsTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
+                'uuid' => Str::uuid(),
                 'name' => 'suzuki',
                 'email' => 'hiroyuki.suzuki.developer@gmail.com',
                 'email_verified_at' => NULL,
